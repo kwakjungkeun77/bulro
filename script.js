@@ -11,7 +11,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
 });
 
 const galleryImages = [
-    'images/불로FC-전체 사진-73824713435.jpg'
+    'images/main.jpg'
 ];
 
 const galleryContainer = document.getElementById('gallery-container');
