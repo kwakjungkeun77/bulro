@@ -1,9 +1,24 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     color: #333;
+    min-width: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 header {
@@ -23,17 +38,19 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 0.5rem;
 }
 
 nav ul li {
-    margin: 0 1rem;
+    margin: 0;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 0.5rem;
+    padding: 0.65rem 0.9rem;
     display: block;
 }
 
@@ -42,8 +59,9 @@ nav ul li a:hover {
 }
 
 section {
-    padding: 2rem;
-    margin: 1rem;
+    padding: 1.5rem 1rem;
+    margin: 0 auto;
+    max-width: 1100px;
     border-bottom: 1px solid #ddd;
 }
 
@@ -168,7 +186,47 @@ footer {
 }
 
 @media (max-width: 820px) {
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav ul li a {
+        text-align: center;
+    }
+
+    section {
+        padding: 1rem;
+        margin: 0.75rem auto;
+    }
+
     .board-panel {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 1rem 0.75rem;
+    }
+
+    nav ul {
+        gap: 0;
+    }
+
+    nav ul li a {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .gallery {
+        gap: 0.75rem;
+    }
+
+    .gallery-item {
+        width: 100%;
+    }
+
+    .board-panel {
+        gap: 1rem;
     }
 }
